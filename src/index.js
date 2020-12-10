@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Tạo store tổng của ứng dụng
+// import { rootReducer } from './redux/OanTuTiReducer';
+// Provider là component kết nối redux store với component react
+import { Provider } from 'react-redux';
+import { store } from '../src/redux/rootReducer'
+
+// const store = createStore(rootReducer);
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
